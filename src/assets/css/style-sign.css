@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-link {
+  color: black;
+}
+
+.nav-link:hover {
+  color: #fb9847;
+}
+
+.btn-nav {
+  padding: 5px;
+  border-radius: 30px;
+  color: #fb9847;
+  border-color: #fb9847;
+}
+
+.button-nav {
+  border-radius: 30px;
+  color: white;
+  background-color: #fb9847;
+  border-color: #fb9847;
+}
+
+.button-nav:hover {
+  background-color: #fb9847;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fb9847;
+}
+
+.login {
+  min-height: 91vh;
+}
+
+.login-heading {
+  font-weight: 300;
+}
+
+.form {
+  border-radius: 70px;
+}
+
+.btn-login {
+  font-size: 0.9rem;
+  border-radius: 70px;
+  border-color: #fb9847;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+}
+
+.warna-teks {
+  color: #fb9847;
+}
+
+.judul-login span {
+  color: #fb9847;
+}
+
+.judul-login {
+  color: black;
+}
+
+.judul-daftar {
+  color: black;
+}
+
+.judul-daftar span {
+  color: #fb9847;
+}
+
+.text-center span a {
+  color: #fb9847;
+}
+
+.btn-login:hover {
+  color: white;
+  background-color: #fb9847;
+}
+
+.btn-signUp {
+  font-size: 0.9rem;
+  border-radius: 70px;
+  border-color: #fb9847;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+}
+
+.btn-signUp:hover {
+  color: white;
+  background-color: #fb9847;
+}
+
+/* Jumbotron */
+.jumbotron {
+  color: white;
+  background-size: cover;
+}
+
+.carousel .item {
+  height: 300px;
+}
+
+.item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 300px;
+}
+
+.menu-kelas li {
+  display: inline-block;
+  border-bottom: 1px solid #6c757d;
+}
+
+.menu-kelas .active {
+  border-bottom: 1px solid #fb9847;
+}
+
+.area-menu-kelas {
+  display: flex;
+  justify-content: center;
+}
+/* Jumbotron */
