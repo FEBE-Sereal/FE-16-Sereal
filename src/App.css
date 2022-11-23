@@ -197,8 +197,11 @@ a.nav-link:hover {
   color: var(--main-color);
 }
 
-footer p, a,
-h6 {
+.text-center{
+  text-decoration: none;
+}
+
+footer .text-center p, a {
   color: var(--main-color);
   text-decoration: none;
 }

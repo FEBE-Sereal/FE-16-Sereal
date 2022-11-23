@@ -6,6 +6,7 @@ import Register from "./pages/Register/Register";
 import Explore from "./pages/Explore/Explore";
 import Gallery from "./pages/Gallery/Gallery";
 import About from "./pages/About/About";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 const AppRouter = () => {
   return (
@@ -17,6 +18,7 @@ const AppRouter = () => {
       <Route path="/explore" element={<Explore />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/about" element={<About />} />
+      <Route path="/dasboard" element={<Dashboard/>} />
     </Routes>
   );
 };
