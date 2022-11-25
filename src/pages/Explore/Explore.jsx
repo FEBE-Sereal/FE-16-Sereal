@@ -75,7 +75,7 @@ const Explore = () => {
                       <p className="card-text">{item.desc}</p>
                       <div className="d-flex justify-content-between">
                         <Link to="">{item.level}</Link>
-                        <Link to={item.link} className="btn btn-main-color" id="card-button">
+                        <Link to="./detail" className="btn btn-main-color" id="card-button">
                           Lihat Kelas
                         </Link>
                       </div>

@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LogoSereal from "../../assets/img/logo_sereal.png";
-import "./Navbar.css";
-import "../../assets/css/style.css";
+// import "./Navbar.css";
+// import "../../assets/css/style.css";
 
 function Navbar() {
   return (

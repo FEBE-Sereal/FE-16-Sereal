@@ -1,11 +1,52 @@
 import React from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { Signin } from "../../redux/actions/action";
+import { useState } from "react";
+import { toast, Zoom } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "../../assets/css/style-sign.css";
-import { Link } from "react-router-dom";
-import google from "../../assets/img/google.png";
-import LoginCat from "../../assets/img/login_cat.png";
 import bg from "../../assets/img/bg-log.jpg";
 
-function Login() {
+const Login = () => {
+  const { user } = useSelector((state) => state.user);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    dispatch(Signin(email, password));
+  }, []);
+
+  const SubmitForm = (e) => {
+    e.preventDefault();
+    const cariAkun = user.find((item) => item.email === email && item.password === password);
+
+    if (cariAkun) {
+      localStorage.setItem("user", JSON.stringify(cariAkun));
+      toast.success(" Selamat kamu berhasil login!", {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        transition: Zoom,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      navigate("/home");
+    } else {
+      toast.error("kamu belum punya akun", {
+        autoClose: 1000,
+        position: "top-center",
+        transition: Zoom,
+      });
+    }
+  };
+
   return (
     <>
       <div className="container-fluid ps-md-0">
@@ -22,13 +63,13 @@ function Login() {
                     <h2 className="login-heading mb-4">Sign In</h2>
 
                     {/* <!-- Sign In Form --> */}
-                    <form id="login-form" method="GET">
+                    <form onSubmit={SubmitForm} id="login-form" method="GET">
                       <div className="form-floating mb-3">
-                        <input type="email" required className="form-control" id="email" placeholder="name@example.com" />
+                        <input type="email" required className="form-control" id="email" placeholder="name@example.com" value={email} onChange={(e) => setEmail(e.target.value)} />
                         <label htmlFor="floatingInput">Email address</label>
                       </div>
                       <div className="form-floating mb-3">
-                        <input type="password" required className="form-control" id="password" placeholder="Password" />
+                        <input type="password" required className="form-control" id="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
                         <label htmlFor="floatingPassword">Password</label>
                       </div>
                       <div className="d-grid">
@@ -55,6 +96,6 @@ function Login() {
       </div>
     </>
   );
-}
+};
 
 export default Login;

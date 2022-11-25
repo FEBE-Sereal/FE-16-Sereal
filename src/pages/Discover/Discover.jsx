@@ -70,32 +70,30 @@ const Discover = () => {
               {/* <!-- card with carousel --> */}
               <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel" data-interval="10000">
                 <div className="carousel-inner">
-                  <div className="carousel-item">
-                    {/* Get from API */}
-                    {listDiscovery.map((item) => (
-                      <div className="carousel-item">
-                        <div className="card d-inline-block shadow-lg">
-                          <div className="card-img-top">
-                            <img src={item.avatar} alt="members" className="img-fluid rounded-circle w-50 p-4" />
-                          </div>
-                          <div className="card-body">
-                            <h3 className="card-title">{item.name}</h3>
-                            <p className="card-text text-secondary">{item.comment}</p>
-                            <p className="text-black-50">{item.company}</p>
-                          </div>
+                  {/* Get from API */}
+                  {listDiscovery.map((item) => (
+                    <div className="carousel-item">
+                      <div className="card d-inline-block shadow-lg">
+                        <div className="card-img-top">
+                          <img src={item.avatar} alt="members" className="img-fluid rounded-circle w-50 p-4" />
+                        </div>
+                        <div className="card-body">
+                          <h3 className="card-title">{item.name}</h3>
+                          <p className="card-text text-secondary">{item.comment}</p>
+                          <p className="text-black-50">{item.company}</p>
                         </div>
                       </div>
-                    ))}
-                    {/* <!-- second card --> */}
-                    <div className="card d-inline-block shadow-lg">
-                      <div className="card-img-top">
-                        <img src="${item.avatar}" alt="members" className="img-fluid rounded-circle w-50 p-4" />
-                      </div>
-                      <div className="card-body">
-                        <h3 className="card-title">""</h3>
-                        <p className="card-text text-secondary">""</p>
-                        <p className="text-black-50">""</p>
-                      </div>
+                    </div>
+                  ))}
+                  {/* <!-- second card --> */}
+                  <div className="card d-inline-block shadow-lg">
+                    <div className="card-img-top">
+                      <img src="${item.avatar}" alt="members" className="img-fluid rounded-circle w-50 p-4" />
+                    </div>
+                    <div className="card-body">
+                      <h3 className="card-title">""</h3>
+                      <p className="card-text text-secondary">""</p>
+                      <p className="text-black-50">""</p>
                     </div>
                   </div>
                 </div>

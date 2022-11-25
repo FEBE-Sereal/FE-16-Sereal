@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import RightArrow from "../../assets/img/RightArrow.png";
-import { homesServices } from "../../services/homesServices";
+import { homeServices } from "../../services/homeServices";
 import "../../assets/css/style-home.css";
 
-function Home() {
-  const [listHomes, setListHomes] = useState([]);
+const Home = () => {
+  const [listHome, setListHome] = useState([]);
   useEffect(() => {
-    homesServices.getHomesList().then((response) => {
-      setListHomes(response);
+    homeServices.getHomeList().then((response) => {
+      setListHome(response);
     });
   }, []);
 
-  console.log(listHomes);
+  console.log(listHome);
 
   return (
     <>
@@ -60,22 +60,22 @@ function Home() {
           <div className="container">
             <div className="carousel-inner">
               {/* get data from API */}
-              {/* {homesServices.map((item) => (
-                <div class="carousel-item my-5">
-                  <div class="row g-0 position-relative">
-                    <div class="col-md-6 mb-md-0 p-md-4">
-                      <img src={item.img} class="banner" alt="..." />
+              {listHome.map((item) => (
+                <div className="carousel-item my-5">
+                  <div className="row g-0 position-relative">
+                    <div className="col-md-6 mb-md-0 p-md-4">
+                      <img src={item.img} className="banner" alt="..." />
                     </div>
-                    <div class="col-md-6 p-4 ps-md-0">
-                      <h5 class="mt-3 fw-bold">{item.judul}</h5>
-                      <p class="text-secondary">{item.caption}</p>
-                      <Link to="#" class="text-decoration-none">
+                    <div className="col-md-6 p-4 ps-md-0">
+                      <h5 className="mt-3 fw-bold">{item.judul}</h5>
+                      <p className="text-secondary">{item.caption}</p>
+                      <Link to="#" className="text-decoration-none">
                         Cari tahu lebih lanjut{" "}
                       </Link>
                     </div>
                   </div>
                 </div>
-              ))} */}
+              ))}
             </div>
           </div>
 
@@ -90,6 +90,6 @@ function Home() {
       {/* <!-- General Class End--> */}
     </>
   );
-}
+};
 
 export default Home;
