@@ -220,3 +220,16 @@ section .ex-seni h2 {
   color: var(--bg-color);
 }
 /* button expoler END*/
+
+.p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.img-fluid {
+  height: 100%;
+  width: 100%;
+}

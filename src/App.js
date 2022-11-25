@@ -17,4 +17,5 @@ function App() {
   );
 }
 
+<script src="https://cdn.jsdelivr.net/npm/react-bootstrap@next/dist/react-bootstrap.min.js" crossorigin></script>;
 export default App;

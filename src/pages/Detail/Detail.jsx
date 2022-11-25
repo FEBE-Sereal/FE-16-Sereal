@@ -48,7 +48,13 @@ const Detail = () => {
             </div>
           </div>
           <div className="col-md-8">
-            <div id="materi"></div>
+            <div id="materi">
+              <div>
+                {/* <h3>{item.judul}</h3>
+                  <img src="${item.img}" alt="...">
+                  <p>{item.isi}</p> */}
+              </div>
+            </div>
           </div>
         </div>
       </main>

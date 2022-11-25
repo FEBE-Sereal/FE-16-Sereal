@@ -46,10 +46,14 @@ function Register() {
       });
     } else {
       try {
-        const response = await axios.post("https://63556474483f5d2df3b3820f.mockapi.io/users", {
-          email: email,
-          password: password,
-        });
+        const user = {
+          name: "coba",
+          email: "coba@gmail.com",
+          password: "12345",
+          role: "admin",
+        };
+        const response = await axios.post("https://sereal-be-testing.up.railway.app/register", user);
+        console.log(response);
         toast.success("selamat kamu berhasil membuat akun", {
           position: "top-center",
         });

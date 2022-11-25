@@ -180,7 +180,7 @@ section h1 {
 /* kitten image */
 section .row .col-md-5 {
   padding: 5vmin 1vmin;
-  padding-bottom: 35vmin;
+  margin-bottom: 5%;
 }
 
 section .row .col-md-5 img {
@@ -214,11 +214,15 @@ section .row .col-md-5 img {
   background-color: var(--main-color);
   color: var(--bg-color);
 }
+
+.section-1 {
+  padding: 3%;
+}
 /* button join END*/
 
 /* Section Team */
 
-.section-2 .container h1 {
+/* .section-2 .container h1 {
   font-size: 6vmin;
 }
 
@@ -237,6 +241,6 @@ section .row .col-md-5 img {
 }
 
 .border-radius {
-  border-radius: 340px;
+  border-radius: 50px;
   width: 60%;
-}
+} */

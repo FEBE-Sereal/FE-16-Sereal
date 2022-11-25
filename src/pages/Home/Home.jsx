@@ -3,16 +3,29 @@ import { Link } from "react-router-dom";
 import RightArrow from "../../assets/img/RightArrow.png";
 import { homeServices } from "../../services/homeServices";
 import "../../assets/css/style-home.css";
+import CardHome from "../../components/CardHome/cardHome";
+import Carousel from "react-bootstrap/Carousel";
+import melukis from "../../assets/img/melukis.png";
+import menari from "../../assets/img/menari.png";
+import musik from "../../assets/img/musik.png";
+import teater from "../../assets/img/teater.png";
+import digitalart from "../../assets/img/digitalart.png";
 
 const Home = () => {
-  const [listHome, setListHome] = useState([]);
-  useEffect(() => {
-    homeServices.getHomeList().then((response) => {
-      setListHome(response);
-    });
-  }, []);
+  const url = "https://635272a4ffbb7da0f2d8983d.mockapi.io/api/v1/ucup";
+  const [home, setHome] = useState([]);
 
-  console.log(listHome);
+  const getDataHome = async () => {
+    const response = await fetch(url);
+    const dataHome = await response.json();
+    // console.log(dataArtikel);
+
+    setHome(dataHome);
+    // console.log(artikel);
+  };
+  useEffect(() => {
+    getDataHome();
+  });
 
   return (
     <>
@@ -35,56 +48,35 @@ const Home = () => {
       {/* <!-- Banner End--> */}
 
       {/* <!-- General Class --> */}
-      <section>
+      <section className="main pb-5">
         <div className="ex-seni text-center my-5">
           <h2>Explore Pilihan Seni Sesuai Minat mu</h2>
         </div>
-        <nav>
-          <div className="d-none d-md-flex nav nav-tabs justify-content-center my-5" id="nav-tab" role="tablist">
-            <button id="btn-melukis" className="nav-link active" data-bs-toggle="tab" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
-              Melukis
-            </button>
-            <button id="btn-digital-art" className="nav-link" data-bs-toggle="tab" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
-              Digital Art
-            </button>
-            <button id="btn-teater" className="nav-link" data-bs-toggle="tab" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
-              Teater
-            </button>
-            <button id="btn-menari" className="nav-link" data-bs-toggle="tab" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
-              Menari
-            </button>
+        <div className="container">
+          <div id="homes">
+            {home.map((item) => (
+              // console.log(item.id)
+              <CardHome id={item.id} img={item.img} judul={item.judul} caption={item.caption} />
+            ))}
           </div>
-        </nav>
-
-        <div id="carouselExampleIndicators" className="carousel slide" data-bs-interval="false">
-          <div className="container">
-            <div className="carousel-inner">
-              {/* get data from API */}
-              {listHome.map((item) => (
-                <div className="carousel-item my-5">
-                  <div className="row g-0 position-relative">
-                    <div className="col-md-6 mb-md-0 p-md-4">
-                      <img src={item.img} className="banner" alt="..." />
-                    </div>
-                    <div className="col-md-6 p-4 ps-md-0">
-                      <h5 className="mt-3 fw-bold">{item.judul}</h5>
-                      <p className="text-secondary">{item.caption}</p>
-                      <Link to="#" className="text-decoration-none">
-                        Cari tahu lebih lanjut{" "}
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ))}
+          {/* <div className="row">
+            <div className="col-lg-4">
+              <img className="img-fluid" src={digitalart} alt="" />
             </div>
-          </div>
-
-          <button className="d-sm-none carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <img src={RightArrow} alt="" className="rotate-img" />
-          </button>
-          <button className="d-sm-none carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <img src={RightArrow} alt="" />
-          </button>
+            <div className="col-lg-8">
+              <div className="title py-2">
+                <h4>Membuat karya dengan teknologi</h4>
+              </div>
+              <div className="paragraph">
+                <p>Ciptakan karya dan praktik artistik dengan teknologi digital yang membuatmu lebih ahli dalam memanfaatkan teknologi terkini dan menciptakan tren karya digital!</p>
+              </div>
+              <div className="more">
+                <a href="/list-kelas.html" className="text-decoration-none">
+                  Cari tahu lebih lanjut >
+                </a>
+              </div>
+            </div>
+          </div> */}
         </div>
       </section>
       {/* <!-- General Class End--> */}

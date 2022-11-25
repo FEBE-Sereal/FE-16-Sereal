@@ -1,6 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LogoSereal from "../../assets/img/logo_sereal.png";
+import team from "../../assets/img/team1.png";
+import NavDropdown from "react-bootstrap/NavDropdown";
+
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
 // import "./Navbar.css";
 // import "../../assets/css/style.css";
 
@@ -53,6 +58,9 @@ function Navbar() {
                   </a>
                 </ul>
               </div>
+              <NavDropdown menuVariant="dark">
+                <NavDropdown.Item href="/dashboard">Dashboard</NavDropdown.Item>
+              </NavDropdown>
             </div>
           </div>
         </nav>

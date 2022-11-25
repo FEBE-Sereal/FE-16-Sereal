@@ -8,14 +8,14 @@ import UIface4 from "../../assets/img/UIface4.jpg";
 import { discoverServices } from "../../services/discoverServices";
 
 const Discover = () => {
-  const [listDiscovery, setListDiscovery] = useState([]);
-  useEffect(() => {
-    discoverServices.getDiscoveryList().then((response) => {
-      setListDiscovery(response);
-    });
-  }, []);
+  // const [listDiscovery, setListDiscovery] = useState([]);
+  // useEffect(() => {
+  //   discoverServices.getDiscoveryList().then((response) => {
+  //     setListDiscovery(response);
+  //   });
+  // }, []);
 
-  console.log(listDiscovery);
+  // console.log(listDiscovery);
 
   return (
     <>
@@ -42,35 +42,30 @@ const Discover = () => {
         </div>
       </section>
 
-      {/* <!-- section 2 --> */}
-      <section className="section-2 me-5">
+      {/* <section className="section-2 me-5">
         <div className="container text-center">
           <h1 className="text-dark">Feedback from users</h1>
           <p className="text-secondary">We would like your feedback to improve our website</p>
 
-          {/* <!-- Cards --> */}
-          <div className="team row">
-            <div className="col-md-4 col-12 text-center">
-              {/* <!-- first --> */}
-              <div className="card me-2 d-inline-block shadow-lg">
-                <div className="card-img-top">
-                  <img src={UIface3} alt="members" className="img-fluid border-radius p-4" />
+          <div class="team row">
+            <div class="col-md-4 col-12 text-center">
+              <div class="card me-2 d-inline-block shadow-lg">
+                <div class="card-img-top">
+                  <img src={UIface3} alt="members" class="img-fluid border-radius p-4" />
                 </div>
-                <div className="card-body">
-                  <h3 className="card-title">Uncle Roger</h3>
-                  <p className="card-text text-secondary">
+                <div class="card-body">
+                  <h3 class="card-title">Uncle Roger</h3>
+                  <p class="card-text text-secondary">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic velit quod, qui quo eum esse, quisquam quasi nesciunt veniam praesentium fugit magni architecto neque deserunt optio, ab accusamus assumenda obcaecati ex
                     animi expedita iusto! Sed magnam vero culpa nihil atque!
                   </p>
-                  <p className="text-black-50">CEO at Serum</p>
+                  <p class="text-black-50">CEO at Serum</p>
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
-              {/* <!-- card with carousel --> */}
-              <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel" data-interval="10000">
-                <div className="carousel-inner">
-                  {/* Get from API */}
+            <div class="col-md-4">
+              <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-interval="10000">
+                <div class="carousel-inner">
                   {listDiscovery.map((item) => (
                     <div className="carousel-item">
                       <div className="card d-inline-block shadow-lg">
@@ -85,39 +80,27 @@ const Discover = () => {
                       </div>
                     </div>
                   ))}
-                  {/* <!-- second card --> */}
-                  <div className="card d-inline-block shadow-lg">
-                    <div className="card-img-top">
-                      <img src="${item.avatar}" alt="members" className="img-fluid rounded-circle w-50 p-4" />
-                    </div>
-                    <div className="card-body">
-                      <h3 className="card-title">""</h3>
-                      <p className="card-text text-secondary">""</p>
-                      <p className="text-black-50">""</p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
-              {/* <!-- first --> */}
-              <div className="card d-inline-block shadow-lg">
-                <div className="card-img-top">
-                  <img src={UIface4} alt="members" className="img-fluid border-radius p-4" />
+            <div class="col-md-4">
+              <div class="card d-inline-block shadow-lg">
+                <div class="card-img-top">
+                  <img src={UIface4} alt="members" class="img-fluid border-radius p-4" />
                 </div>
-                <div className="card-body">
-                  <h3 className="card-title">Angeline</h3>
-                  <p className="card-text text-secondary">
+                <div class="card-body">
+                  <h3 class="card-title">Angeline</h3>
+                  <p class="card-text text-secondary">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic velit quod, qui quo eum esse, quisquam quasi nesciunt veniam praesentium fugit magni architecto neque deserunt optio, ab accusamus assumenda obcaecati ex
                     animi expedita iusto! Sed magnam vero culpa nihil atque!
                   </p>
-                  <p className="text-black-50">Member at Serum</p>
+                  <p class="text-black-50">Member at Serum</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

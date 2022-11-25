@@ -207,7 +207,7 @@ function About() {
               </ul>
             </div>
           </div>
-          <div className="col-sm-6 col-md-4">
+          {/* <div className="col-sm-6 col-md-4">
             <div className="team-item">
               <img src={Team1} className="team-img" alt="pic" />
 
@@ -243,7 +243,7 @@ function About() {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
