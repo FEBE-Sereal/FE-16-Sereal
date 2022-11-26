@@ -6,7 +6,7 @@ import Team1 from "../../assets/img/team1.png";
 function Dashboard() {
   return (
     <>
-      <section style={{ backgroundColor: "#eee" }}>
+      <section style={{ backgroundColor: "#fff" }}>
         <div className="container py-5">
           <div className="row">
             <div className="col-lg-4">
@@ -80,35 +80,6 @@ function Dashboard() {
                     </div>
                     <div className="col-sm-9">
                       <p className="text-muted mb-0">asgard@here.com</p>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-sm-3">
-                      <p className="mb-0">Phone</p>
-                    </div>
-                    <div className="col-sm-9">
-                      <p className="text-muted mb-0">(+62) 891-234-56</p>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-sm-3">
-                      <p className="mb-0">Mobile</p>
-                    </div>
-                    <div className="col-sm-9">
-                      <p className="text-muted mb-0">(+62) 891-234-56</p>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-sm-3">
-                      <p className="mb-0">Address</p>
-                    </div>
-                    <div className="col-sm-9">
-                      <p className="text-muted mb-0">
-                        Jakarta
-                      </p>
                     </div>
                   </div>
                 </div>
