@@ -17,7 +17,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    dispatch(Signin(email, password));
+    // dispatch(Signin(email, password));
   }, []);
 
   const SubmitForm = (e) => {
