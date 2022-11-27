@@ -1,51 +1,61 @@
-import React from "react";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
-import { Signin } from "../../redux/actions/action";
+import React, { useEffect } from "react";
+// import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { toast, Zoom } from "react-toastify";
-import { ToastContainer } from "react-toastify";
+import { Link, useNavigate } from "react-router-dom";
 import "../../assets/css/style-sign.css";
 import bg from "../../assets/img/bg-log.jpg";
+import { loginServices } from "../../services/loginServices";
 
 const Login = () => {
-  const { user } = useSelector((state) => state.user);
+  // const { user } = useSelector((state) => state.user);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const navigate = useNavigate();
 
   useEffect(() => {
     // dispatch(Signin(email, password));
   }, []);
 
+  // const SubmitForm = (e) => {
+  //   e.preventDefault();
+  //   const cariAkun = user.find((item) => item.email === email && item.password === password);
+
+  //   if (cariAkun) {
+  //     localStorage.setItem("user", JSON.stringify(cariAkun));
+  //     toast.success(" Selamat kamu berhasil login!", {
+  //       position: "top-center",
+  //       autoClose: 1000,
+  //       hideProgressBar: false,
+  //       transition: Zoom,
+  //       closeOnClick: true,
+  //       pauseOnHover: true,
+  //       draggable: true,
+  //       progress: undefined,
+  //       theme: "light",
+  //     });
+  //     navigate("/home");
+  //   } else {
+  //     toast.error("kamu belum punya akun", {
+  //       autoClose: 1000,
+  //       position: "top-center",
+  //       transition: Zoom,
+  //     });
+  //   }
+  // };
+
   const SubmitForm = (e) => {
     e.preventDefault();
-    const cariAkun = user.find((item) => item.email === email && item.password === password);
 
-    if (cariAkun) {
-      localStorage.setItem("user", JSON.stringify(cariAkun));
-      toast.success(" Selamat kamu berhasil login!", {
-        position: "top-center",
-        autoClose: 1000,
-        hideProgressBar: false,
-        transition: Zoom,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-      navigate("/home");
-    } else {
-      toast.error("kamu belum punya akun", {
-        autoClose: 1000,
-        position: "top-center",
-        transition: Zoom,
-      });
+    let params = {
+      email,
+      password
     }
-  };
+
+    loginServices.login(params).then((response) => {
+      console.log(response)
+    })
+  }
 
   return (
     <>
