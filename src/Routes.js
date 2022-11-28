@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Navigate, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Discover from "./pages/Discover/Discover";
 import Login from "./pages/Login/Login";
@@ -9,10 +9,21 @@ import About from "./pages/About/About";
 import Detail from "./pages/Detail/Detail";
 import Dashboard from "./pages/Dashboard/Dashboard";
 
+
+
 const AppRouter = () => {
+  const token = window.localStorage.getItem("token") === null
+  console.log(window.localStorage.getItem("token"))
   return (
     <Routes>
       <Route path="/" element={<Discover />} />
+      <Route path="/login" element={
+         token ?
+          <Login />
+          :
+          <Navigate replace to="/home" />
+        
+      } />
       <Route path="/home" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />

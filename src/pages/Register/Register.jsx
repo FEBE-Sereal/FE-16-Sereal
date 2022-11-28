@@ -44,12 +44,14 @@ function Register() {
         position: "top-right",
         transition: Bounce,
       });
+
     } else {
+      //Akan menyebabkan salah di login
       try {
         const user = {
-          name: "abdul",
-          email: "abdul@gmail.com",
-          password: "123456",
+          name: name,
+          email: email,
+          password: password,
           role: "admin",
         };
         const response = await axios.post("https://sereal-be-testing.up.railway.app/register", user);

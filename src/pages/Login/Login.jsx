@@ -54,6 +54,8 @@ const Login = () => {
 
     loginServices.login(params).then((response) => {
       console.log(response);
+      localStorage.setItem("token", response.token);
+      window.location.reload();
     });
   };
 
