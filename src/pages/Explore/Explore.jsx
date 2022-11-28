@@ -10,7 +10,7 @@ const Explore = () => {
   const [listExplore, setListExplore] = useState([]);
   useEffect(() => {
     eksploreServices.getExploreList().then((response) => {
-      setListExplore(response);
+      setListExplore(response.data);
     });
   }, []);
 

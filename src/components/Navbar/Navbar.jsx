@@ -60,6 +60,10 @@ function Navbar() {
               </div>
               <NavDropdown menuVariant="light">
                 <NavDropdown.Item href="/dashboard">Dashboard</NavDropdown.Item>
+                <NavDropdown.Item onClick={() => {
+                  localStorage.clear();
+                  window.location.href ="/login";
+                }}>Logout</NavDropdown.Item>
               </NavDropdown>
             </div>
           </div>
