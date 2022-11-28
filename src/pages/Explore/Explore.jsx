@@ -69,13 +69,14 @@ const Explore = () => {
               {listExplore.map((item) => (
                 <div className="col my-3">
                   <div className="card flex-row ">
-                    <img src={item.img} height="100%" className="col-centered" alt="..." />
+                    <img src={item.image} height="100%" className="col-centered" alt="..." />
                     <div className="card-body">
-                      <h5 className="card-title">{item.judul}</h5>
-                      <p className="card-text">{item.desc}</p>
+                      <h5 className="card-title">{item.title}</h5>
+                      <p className="card-text">{item.description}</p>
                       <div className="d-flex justify-content-between">
-                        <Link to="">{item.level}</Link>
-                        <Link to="./detail" className="btn btn-main-color" id="card-button">
+                        {/* <p className="card-text">Level: {item.level}</p> */}
+                        <Link to="">Level: {item.level}</Link>
+                        <Link to={`./detail/${item._id}`} className="btn btn-main-color" id="card-button">
                           Ikuti Kelas
                         </Link>
                       </div>

@@ -6,7 +6,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
-// import "./Navbar.css";
+import "./Navbar.css";
 // import "../../assets/css/style.css";
 
 function Navbar() {
@@ -58,7 +58,7 @@ function Navbar() {
                   </a>
                 </ul>
               </div>
-              <NavDropdown menuVariant="dark">
+              <NavDropdown menuVariant="light">
                 <NavDropdown.Item href="/dashboard">Dashboard</NavDropdown.Item>
               </NavDropdown>
             </div>

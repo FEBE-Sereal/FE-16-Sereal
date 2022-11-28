@@ -49,13 +49,13 @@ const Login = () => {
 
     let params = {
       email,
-      password
-    }
+      password,
+    };
 
     loginServices.login(params).then((response) => {
-      console.log(response)
-    })
-  }
+      console.log(response);
+    });
+  };
 
   return (
     <>

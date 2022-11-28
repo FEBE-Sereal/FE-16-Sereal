@@ -47,15 +47,16 @@ function Register() {
     } else {
       try {
         const user = {
-          name: "coba",
-          email: "coba@gmail.com",
-          password: "12345",
+          name: "abdul",
+          email: "abdul@gmail.com",
+          password: "123456",
           role: "admin",
         };
         const response = await axios.post("https://sereal-be-testing.up.railway.app/register", user);
+
         console.log(response);
         toast.success("selamat kamu berhasil membuat akun", {
-          position: "top-center",
+          position: "top-right",
         });
         navigate("/login");
       } catch (error) {

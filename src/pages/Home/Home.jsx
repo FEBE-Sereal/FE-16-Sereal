@@ -1,15 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import RightArrow from "../../assets/img/RightArrow.png";
-import { homeServices } from "../../services/homeServices";
 import "../../assets/css/style-home.css";
 import CardHome from "../../components/CardHome/cardHome";
-import Carousel from "react-bootstrap/Carousel";
-import melukis from "../../assets/img/melukis.png";
-import menari from "../../assets/img/menari.png";
-import musik from "../../assets/img/musik.png";
-import teater from "../../assets/img/teater.png";
-import digitalart from "../../assets/img/digitalart.png";
 
 const Home = () => {
   const url = "https://635272a4ffbb7da0f2d8983d.mockapi.io/api/v1/ucup";
@@ -18,10 +10,10 @@ const Home = () => {
   const getDataHome = async () => {
     const response = await fetch(url);
     const dataHome = await response.json();
-    // console.log(dataArtikel);
+    // console.log(dataHome);
 
     setHome(dataHome);
-    // console.log(artikel);
+    // console.log(home);
   };
   useEffect(() => {
     getDataHome();
@@ -59,24 +51,6 @@ const Home = () => {
               <CardHome id={item.id} img={item.img} judul={item.judul} caption={item.caption} />
             ))}
           </div>
-          {/* <div className="row">
-            <div className="col-lg-4">
-              <img className="img-fluid" src={digitalart} alt="" />
-            </div>
-            <div className="col-lg-8">
-              <div className="title py-2">
-                <h4>Membuat karya dengan teknologi</h4>
-              </div>
-              <div className="paragraph">
-                <p>Ciptakan karya dan praktik artistik dengan teknologi digital yang membuatmu lebih ahli dalam memanfaatkan teknologi terkini dan menciptakan tren karya digital!</p>
-              </div>
-              <div className="more">
-                <a href="/list-kelas.html" className="text-decoration-none">
-                  Cari tahu lebih lanjut >
-                </a>
-              </div>
-            </div>
-          </div> */}
         </div>
       </section>
       {/* <!-- General Class End--> */}

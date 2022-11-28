@@ -1,0 +1,38 @@
+/* NAVBAR START */
+.btn-main-color {
+  background-color: var(--main-color);
+  color: #fff;
+}
+.btn-main-color:hover {
+  background-color: var(--main-color);
+  color: #fff;
+  opacity: 80%;
+}
+
+a.nav-link.fancy-link {
+  position: relative;
+}
+a.nav-link.fancy-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: -1px;
+  left: 0;
+  background-color: var(--main-color);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.4s ease-in-out;
+}
+a.nav-link.fancy-link:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+  color: var(--main-color);
+}
+a.nav-link {
+  font-weight: var(--font-medium);
+  color: #2c2a2a;
+}
+a.nav-link:hover {
+  color: var(--main-color);
+}

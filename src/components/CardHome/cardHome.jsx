@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "../../assets/css/style-home.css";
 
 function cardHome(props) {
-  console.log(props);
+  // console.log(props);
   return (
     <>
       <div className="row mb-5">
