@@ -7,7 +7,7 @@ export const homeServices = {
 
 async function getHomeList() {
   return axios
-    .get("https://635272a4ffbb7da0f2d8983d.mockapi.io/api/v1/ucup")
+    .get("https://sereal-be-testing.up.railway.app/advertising")
     .then((response) => {
       return response.data;
     })

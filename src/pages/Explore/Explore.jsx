@@ -10,7 +10,7 @@ const Explore = () => {
   const [listExplore, setListExplore] = useState([]);
   useEffect(() => {
     eksploreServices.getExploreList().then((response) => {
-      setListExplore(response);
+      setListExplore(response.data);
     });
   }, []);
 
@@ -76,7 +76,7 @@ const Explore = () => {
                       <div className="d-flex justify-content-between">
                         {/* <p className="card-text">Level: {item.level}</p> */}
                         <Link to="">Level: {item.level}</Link>
-                        <Link to={`./detail/${item._id}`} className="btn btn-main-color" id="card-button">
+                        <Link to={`/detail/${item._id}`} className="btn btn-main-color" id="card-button">
                           Ikuti Kelas
                         </Link>
                       </div>

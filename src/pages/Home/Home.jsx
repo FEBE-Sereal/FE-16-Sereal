@@ -2,18 +2,16 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../assets/css/style-home.css";
 import CardHome from "../../components/CardHome/cardHome";
+import { homeServices } from "../../services/homeServices";
 
 const Home = () => {
-  const url = "https://635272a4ffbb7da0f2d8983d.mockapi.io/api/v1/ucup";
+  const url = "https://sereal-be-testing.up.railway.app/advertising";
   const [home, setHome] = useState([]);
 
-  const getDataHome = async () => {
-    const response = await fetch(url);
-    const dataHome = await response.json();
-    // console.log(dataHome);
-
-    setHome(dataHome);
-    // console.log(home);
+  const getDataHome = () => {
+    homeServices.getHomeList().then((response) => {
+      setHome(response.data);
+    });
   };
   useEffect(() => {
     getDataHome();
@@ -48,7 +46,7 @@ const Home = () => {
           <div id="homes">
             {home.map((item) => (
               // console.log(item.id)
-              <CardHome id={item.id} img={item.img} judul={item.judul} caption={item.caption} />
+              <CardHome id={item.id} img={item.image} judul={item.title} caption={item.description} />
             ))}
           </div>
         </div>

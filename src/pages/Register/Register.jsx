@@ -21,25 +21,25 @@ function Register() {
         transition: Zoom,
       });
     } else if (name === "") {
-      toast.warning("Nama tidak boleh kosong", {
+      toast.warning("Isi nama terlebih dahulu", {
         autoClose: 1000,
         position: "top-right",
         transition: Bounce,
       });
     } else if (email === "") {
-      toast.warning("Email tidak boleh kosong", {
+      toast.warning("Isi email terlebih dahulu", {
         autoClose: 1000,
         position: "top-right",
         transition: Bounce,
       });
     } else if (password === "") {
-      toast.warning("Password tidak boleh kosong", {
+      toast.warning("Isi password terlebih dahulu", {
         autoClose: 1000,
         position: "top-right",
         transition: Bounce,
       });
     } else if (password.length < 5) {
-      toast.warning("Password harus memiliki setidaknya 6 karakter", {
+      toast.warning("Panjang password 6 karakter", {
         autoClose: 1000,
         position: "top-right",
         transition: Bounce,
@@ -55,7 +55,7 @@ function Register() {
         const response = await axios.post("https://sereal-be-testing.up.railway.app/register", user);
 
         console.log(response);
-        toast.success("selamat kamu berhasil membuat akun", {
+        toast.success("Berhasil membuat akun", {
           position: "top-right",
         });
         navigate("/login");
