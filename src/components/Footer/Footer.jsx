@@ -93,7 +93,6 @@ function Footer() {
 
           {/* Right */}
           <div>
-<<<<<<< HEAD
             <a href="#" className="me-4 text-reset">
               <i className="fab fa-instagram" style={{ color: "black" }}>
                 <FaInstagram style={{ fontSize: "2rem" }} />
@@ -102,18 +101,6 @@ function Footer() {
             <a href="#" className="me-4 text-reset">
               <i className="fab fa-twitter-f" style={{ color: "black" }}>
                 <FaTwitter style={{ fontSize: "2rem" }} />
-=======
-            <a href="" className="me-4 text-reset">
-              <i className="fab fa-facebook-f">
-              <img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-new.png" />
-                {/* <FaInstagram /> */}
-              </i>
-            </a>
-            <a href="" className="me-4 text-reset">
-              <i className="fab fa-youtube">
-              <img src="https://img.icons8.com/ios-glyphs/30/000000/youtube-play.png" />  
-                {/* <FaYoutube /> */}
->>>>>>> e1ecb26aa0037a5440dfb063a576c19857969670
               </i>
             </a>
             <a href="#" className="me-4 text-reset">

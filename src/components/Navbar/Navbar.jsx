@@ -46,33 +46,37 @@ function Navbar() {
                   </Link>
                 </li>
               </ul>
-              <div id="check-profile">
-                <ul className="navbar-nav gap-1 gap-md-4 mx">
-                  <li className="nav-item">
-                    <a className="nav-link reg fancy-link" href="./register">
-                      Register
+              {localStorage.getItem("token") ? (
+                <>
+                  <FaUserCircle style={{ fontSize: "2rem" }} />
+                  <NavDropdown style={{}} menuVariant="light">
+                    <NavDropdown.Item href="/dashboard">
+                      <CgProfile /> Dashboard
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      onClick={() => {
+                        localStorage.clear();
+                        window.location.href = "/login";
+                      }}
+                    >
+                      <IoMdLogOut /> Logout
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                </>
+              ) : (
+                <div id="check-profile">
+                  <ul className="navbar-nav gap-1 gap-md-4 mx">
+                    <li className="nav-item">
+                      <a className="nav-link reg fancy-link" href="./register">
+                        Register
+                      </a>
+                    </li>
+                    <a href="./login">
+                      <button className="btn btn-main-color"> Login</button>
                     </a>
-                  </li>
-                  <a href="./login">
-                    <button className="btn btn-main-color"> Login</button>
-                  </a>
-                </ul>
-              </div>
-
-              <FaUserCircle style={{ fontSize: "2rem" }} />
-              <NavDropdown style={{}} menuVariant="light">
-                <NavDropdown.Item href="/dashboard">
-                  <CgProfile /> Dashboard
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  onClick={() => {
-                    localStorage.clear();
-                    window.location.href = "/login";
-                  }}
-                >
-                  <IoMdLogOut /> Logout
-                </NavDropdown.Item>
-              </NavDropdown>
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         </nav>
