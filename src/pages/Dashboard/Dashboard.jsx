@@ -13,8 +13,8 @@ function Dashboard() {
                 <div className="card-body text-center">
                   <img src={Team1} alt="avatar" className="rounded-circle img-fluid" style={{ width: "150px" }} />
                   <h5 className="my-3">Nexus</h5>
-                  <p className="text-muted mb-1">Front-End Developer</p>
-                  <p className="text-muted mb-4">Jakarta</p>
+                  {/* <p className="text-muted mb-1">Front-End Developer</p>
+                  <p className="text-muted mb-4">Jakarta</p> */}
                 </div>
               </div>
               {/* <div className="card mb-4 mb-lg-0">
