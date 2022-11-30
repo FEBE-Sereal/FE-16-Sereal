@@ -1,13 +1,13 @@
 import React from "react";
 import axios from "axios";
 
-export const eksploreServices = {
-  getExploreList,
+export const detailServices = {
+  getDetailList,
 };
 
-async function getExploreList() {
+async function getDetailList(_id) {
   return axios
-    .get("https://sereal-be-testing.up.railway.app/kelas")
+    .get(`https://sereal-be-testing.up.railway.app/kelas/${_id}`)
     .then((response) => {
       return response.data;
     })

@@ -1,8 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LogoSereal from "../../assets/img/logo_sereal.png";
+import pp from "../../assets/img/pp.jpg";
+import { CgProfile } from "react-icons/cg";
+import { IoMdLogOut } from "react-icons/io";
+import { FaUser, FaUserCircle } from "react-icons/fa";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import "./Navbar.css";
-import "../../assets/css/style.css";
+import "../../App.css";
+// import "../../assets/css/style.css";
 
 function Navbar() {
   return (
@@ -40,19 +46,37 @@ function Navbar() {
                   </Link>
                 </li>
               </ul>
-              <div id="check-profile">
-                {/* from API */}
-                <ul className="navbar-nav gap-1 gap-md-4 mx">
-                  <li className="nav-item">
-                    <a className="nav-link reg fancy-link" href="./register">
-                      Register
+              {localStorage.getItem("token") ? (
+                <>
+                  <FaUserCircle style={{ fontSize: "2rem" }} />
+                  <NavDropdown style={{}} menuVariant="light">
+                    <NavDropdown.Item href="/dashboard">
+                      <CgProfile /> Dashboard
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      onClick={() => {
+                        localStorage.clear();
+                        window.location.href = "/login";
+                      }}
+                    >
+                      <IoMdLogOut /> Logout
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                </>
+              ) : (
+                <div id="check-profile">
+                  <ul className="navbar-nav gap-1 gap-md-4 mx">
+                    <li className="nav-item">
+                      <a className="nav-link reg fancy-link" href="./register">
+                        Register
+                      </a>
+                    </li>
+                    <a href="./login">
+                      <button className="btn btn-main-color"> Login</button>
                     </a>
-                  </li>
-                  <a href="./login">
-                    <button className="btn btn-main-color">Login</button>
-                  </a>
-                </ul>
-              </div>
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         </nav>

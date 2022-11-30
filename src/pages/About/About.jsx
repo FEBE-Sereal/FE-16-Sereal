@@ -33,15 +33,15 @@ function About() {
 
               <ul className="team-icon">
                 <li>
-                  <Link to="#" className="instagram">
+                  <a href="https://www.instagram.com/" className="instagram">
                     <BsInstagram />
-                  </Link>
+                  </a>
                 </li>
 
                 <li>
-                  <Link to="#" className="github">
+                  <a href="https://github.com/xamp1" className="github">
                     <BsGithub />
-                  </Link>
+                  </a>
                 </li>
 
                 <li>
@@ -71,15 +71,15 @@ function About() {
 
               <ul className="team-icon">
                 <li>
-                  <Link to="#" className="instagram">
+                  <a href="https://www.instagram.com/yazidrr_11/" className="instagram">
                     <BsInstagram />
-                  </Link>
+                  </a>
                 </li>
 
                 <li>
-                  <Link to="#" className="github">
+                  <a href="https://github.com/yazidr1" className="github">
                     <BsGithub />
-                  </Link>
+                  </a>
                 </li>
 
                 <li>
@@ -108,15 +108,15 @@ function About() {
 
               <ul className="team-icon">
                 <li>
-                  <Link to="#" className="instagram">
+                  <a href="https://www.instagram.com/zii0_0fa/" className="instagram">
                     <BsInstagram />
-                  </Link>
+                  </a>
                 </li>
 
                 <li>
-                  <Link to="#" className="github">
+                  <a href="https://github.com/Woozi05" className="github">
                     <BsGithub />
-                  </Link>
+                  </a>
                 </li>
 
                 <li>
@@ -145,15 +145,15 @@ function About() {
 
               <ul className="team-icon">
                 <li>
-                  <Link to="#" className="instagram">
+                  <a href="https://www.instagram.com/farauqq/" className="instagram">
                     <BsInstagram />
-                  </Link>
+                  </a>
                 </li>
 
                 <li>
-                  <Link to="#" className="github">
+                  <a href="https://github.com/farauqq" className="github">
                     <BsGithub />
-                  </Link>
+                  </a>
                 </li>
 
                 <li>
@@ -182,15 +182,15 @@ function About() {
 
               <ul className="team-icon">
                 <li>
-                  <Link to="#" className="instagram">
+                  <a href="https://www.instagram.com/m19y__/" className="instagram">
                     <BsInstagram />
-                  </Link>
+                  </a>
                 </li>
 
                 <li>
-                  <Link to="#" className="github">
+                  <a href="https://github.com/muhammadarsilalhabsy" className="github">
                     <BsGithub />
-                  </Link>
+                  </a>
                 </li>
 
                 <li>

@@ -1,42 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../assets/css/style-profile.css";
 import "../../assets/css/style.css";
-import soon from "../../assets/img/cmingsoon.png";
+import CardGallery from "../../components/CardGallery/cardGallery";
+import { galleryServices } from "../../services/galleryServices";
 
-function Gallery() {
+const Gallery = () => {
+  const [gallery, setGallery] = useState([]);
+
+  const getDataGallery = () => {
+    galleryServices.getGalleryList().then((response) => {
+      setGallery(response.data);
+    });
+  };
+  useEffect(() => {
+    getDataGallery();
+  });
+
   return (
     <>
-      <div className="container text-center">
-        <h1 className="fw-bold">Something Awesome Is Coming Soon!</h1>
-        <p className="text-secondary">It's going to be amazing! For now, you can check our class</p>
-        <Link to="/explore" className="btn btn-join px-3 py-2">
-          Go to class
-        </Link>
-      </div>
-      {/* <!-- Gallery --> */}
-      <div className="row">
-        <div className="col-lg-4 col-md-12 mb-4 mb-lg-0">
-          <img src={soon} className="w-100 shadow-1-strong rounded mb-4" alt="Cooming Soon" />
-
-          {/* <img src={soon} className="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" /> */}
+      <section className="main pb-5">
+        <div className="container">
+          <h1 className="p-4 text-center">Gallery Sereal</h1>
+          {/* <hr className="border border-2 border-dark mx-auto w-25 bg-dark" /> */}
+          <div id="videos" className="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-4">
+            {gallery.map((item, item_content) => (
+              // console.log(item)
+              <CardGallery key={item.id} img={item.image} title={item.title} deskripsi={item.description} author={item.author} />
+            ))}
+          </div>
         </div>
-
-        <div className="col-lg-4 mb-4 mb-lg-0">
-          <img src={soon} className="w-100 shadow-1-strong rounded mb-4" alt="Cooming Soon" />
-
-          {/* <img src="http://gallery.gudskul.art/wp-content/uploads/2020/07/Publikasi-Pameran-Rusun-IG-Feed.jpg" className="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" /> */}
-        </div>
-
-        <div className="col-lg-4 mb-4 mb-lg-0">
-          <img src={soon} className="w-100 shadow-1-strong rounded mb-4" alt="Cooming Soon" />
-
-          {/* <img src="http://gallery.gudskul.art/wp-content/uploads/2020/07/Di-rumah-tak-berarti-melemah.jpg" className="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" /> */}
-        </div>
-      </div>
-      {/* <!-- Gallery --> */}
+      </section>
     </>
   );
-}
+};
 
 export default Gallery;

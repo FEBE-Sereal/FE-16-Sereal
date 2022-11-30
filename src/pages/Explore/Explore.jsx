@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import BgExplore from "../../assets/img/bg-explore.jpg";
-import "../../assets/css/style-profile.css";
+import "../../assets/css/style.css";
 // import "../../assets/css/style.css";
 import "../../App.css";
 import { eksploreServices } from "../../services/eksploreServices";
@@ -10,7 +10,7 @@ const Explore = () => {
   const [listExplore, setListExplore] = useState([]);
   useEffect(() => {
     eksploreServices.getExploreList().then((response) => {
-      setListExplore(response);
+      setListExplore(response.data);
     });
   }, []);
 
@@ -69,14 +69,14 @@ const Explore = () => {
               {listExplore.map((item) => (
                 <div className="col my-3">
                   <div className="card flex-row ">
-                    <img src={item.img} height="100%" className="col-centered" alt="..." />
+                    <img src={item.image} height="100%" className="col-centered" alt="..." />
                     <div className="card-body">
-                      <h5 className="card-title">{item.judul}</h5>
-                      <p className="card-text">{item.desc}</p>
+                      <h5 className="card-title">{item.title}</h5>
+                      <p className="card-text">{item.description}</p>
                       <div className="d-flex justify-content-between">
-                        <Link to="">{item.level}</Link>
-                        <Link to={item.link} className="btn btn-main-color" id="card-button">
-                          Lihat Kelas
+                        <Link to="">Level: {item.level}</Link>
+                        <Link to={`/detail/${item._id}`} className="btn btn-main-color" id="card-button">
+                          Ikuti Kelas
                         </Link>
                       </div>
                     </div>

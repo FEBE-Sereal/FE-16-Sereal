@@ -1,8 +1,8 @@
-import { REGISTER_UP, SIGN_IN } from "../actions/UserActions";
+import { REGISTER_UP, SIGN_IN } from "../actions/action";
 const initialState = {
   user: [],
 };
-const UserReducers = (state = initialState, action) => {
+const Reducer = (state = initialState, action) => {
   switch (action.type) {
     case REGISTER_UP:
       return {
@@ -19,4 +19,4 @@ const UserReducers = (state = initialState, action) => {
   }
 };
 
-export default UserReducers;
+export default Reducer;

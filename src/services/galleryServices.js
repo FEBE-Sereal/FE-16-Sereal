@@ -1,13 +1,13 @@
 import React from "react";
 import axios from "axios";
 
-export const eksploreServices = {
-  getExploreList,
+export const galleryServices = {
+  getGalleryList,
 };
 
-async function getExploreList() {
+async function getGalleryList() {
   return axios
-    .get("https://sereal-be-testing.up.railway.app/kelas")
+    .get(`https://sereal-be-testing.up.railway.app/gallery`)
     .then((response) => {
       return response.data;
     })
