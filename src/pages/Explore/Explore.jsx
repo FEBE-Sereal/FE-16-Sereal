@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import BgExplore from "../../assets/img/bg-explore.jpg";
-import "../../assets/css/style-profile.css";
+import "../../assets/css/style.css";
 // import "../../assets/css/style.css";
 import "../../App.css";
 import { eksploreServices } from "../../services/eksploreServices";
@@ -74,7 +74,6 @@ const Explore = () => {
                       <h5 className="card-title">{item.title}</h5>
                       <p className="card-text">{item.description}</p>
                       <div className="d-flex justify-content-between">
-                        {/* <p className="card-text">Level: {item.level}</p> */}
                         <Link to="">Level: {item.level}</Link>
                         <Link to={`/detail/${item._id}`} className="btn btn-main-color" id="card-button">
                           Ikuti Kelas

@@ -44,8 +44,19 @@
   padding: 0;
 }
 
+/* NAVBAR START */
+.btn-main-color {
+  background-color: var(--main-color);
+  color: #fff;
+}
+.btn-main-color:hover {
+  background-color: var(--main-color);
+  color: #fff;
+  opacity: 80%;
+}
+
 /* EXPLORE START */
-.carousel-caption h1 {
+/* .carousel-caption h1 {
   color: var(--main-color);
   font-weight: var(--font-semibold);
 }
@@ -63,40 +74,4 @@
 #card-button {
   background-color: var(--main-color);
   border: none;
-}
-
-/* EXPLORE END */
-
-.overlay p {
-  color: white;
-}
-
-.overlay h3 {
-  color: var(--main-color);
-}
-
-footer p,
-h6 {
-  color: var(--main-color);
-}
-
-h4 {
-  color: var(--main-color);
-}
-
-.list-materi {
-  background-color: #f6f6f6;
-}
-
-.list-group button {
-  background-color: #fb9847;
-  border-radius: 5px;
-}
-
-.btn-login {
-  font-size: 0.9rem;
-  border-radius: 70px;
-  border-color: #fb9847;
-  letter-spacing: 0.05rem;
-  padding: 0.75rem 1rem;
-}
+} */

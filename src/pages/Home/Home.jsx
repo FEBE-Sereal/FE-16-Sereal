@@ -5,7 +5,6 @@ import CardHome from "../../components/CardHome/cardHome";
 import { homeServices } from "../../services/homeServices";
 
 const Home = () => {
-  const url = "https://sereal-be-testing.up.railway.app/advertising";
   const [home, setHome] = useState([]);
 
   const getDataHome = () => {
@@ -28,7 +27,7 @@ const Home = () => {
                 KEMBANGKAN TALENTA <span>SENIMU</span> BERSAMA SEREAL
               </h1>
               <p>Belajar digital art, melukis, menari, musik, dan teater kini tidak lagi susah. Terutama untuk kalian kaum pelajar yang ingin mengembangkan talentanya.</p>
-              <Link to="/explore" className="btn btn-explore px-3 my-3">
+              <Link to="/explore" className="btn btn-exp px-3 my-3">
                 Explore Kelas
               </Link>
             </div>
@@ -40,7 +39,7 @@ const Home = () => {
       {/* <!-- General Class --> */}
       <section className="main pb-5">
         <div className="ex-seni text-center my-5">
-          <h2>Explore Pilihan Seni Sesuai Minat mu</h2>
+          <h2>Explore Pilihan Seni Sesuai Minatmu</h2>
         </div>
         <div className="container">
           <div id="homes">

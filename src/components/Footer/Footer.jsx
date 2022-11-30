@@ -1,6 +1,6 @@
 import React from "react";
 import LogoSereal from "../../assets/img/logo_sereal.png";
-import { FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -42,22 +42,22 @@ function Footer() {
                 {/* Links */}
                 <h6 className="text-uppercase fw-bold mb-4">Kelas</h6>
                 <p>
-                  <a href="#!" className="text-reset">
+                  <a href="#" className="text-reset">
                     Melukis
                   </a>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset">
+                  <a href="#" className="text-reset">
                     Teater
                   </a>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset">
+                  <a href="#" className="text-reset">
                     Digital Art
                   </a>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset">
+                  <a href="#" className="text-reset">
                     Menari
                   </a>
                 </p>
@@ -69,12 +69,12 @@ function Footer() {
                 {/* Links */}
                 <h6 className="text-uppercase fw-bold mb-4">Galeri</h6>
                 <p>
-                  <a href="#!" className="text-reset">
+                  <a href="#" className="text-reset">
                     Siswa
                   </a>
                 </p>
                 <p>
-                  <a href="#!" className="text-reset">
+                  <a href="#" className="text-reset">
                     Serrum
                   </a>
                 </p>
@@ -93,19 +93,19 @@ function Footer() {
 
           {/* Right */}
           <div>
-            <a href="" className="me-4 text-reset">
-              <i className="fab fa-facebook-f">
-                <FaInstagram />
+            <a href="#" className="me-4 text-reset">
+              <i className="fab fa-instagram" style={{ color: "black" }}>
+                <FaInstagram style={{ fontSize: "2rem" }} />
               </i>
             </a>
-            <a href="" className="me-4 text-reset">
-              <i className="fab fa-youtube">
-                <FaYoutube />
+            <a href="#" className="me-4 text-reset">
+              <i className="fab fa-twitter-f" style={{ color: "black" }}>
+                <FaTwitter style={{ fontSize: "2rem" }} />
               </i>
             </a>
-            <a href="" className="me-4 text-reset">
-              <i className="fab fa-instagram">
-                <img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" />
+            <a href="#" className="me-4 text-reset">
+              <i className="fab fa-youtube" style={{ color: "black" }}>
+                <FaYoutube style={{ fontSize: "2.3rem" }} />
               </i>
             </a>
           </div>

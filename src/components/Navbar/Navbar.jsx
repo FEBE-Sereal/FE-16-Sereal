@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LogoSereal from "../../assets/img/logo_sereal.png";
-import team from "../../assets/img/team1.png";
+import pp from "../../assets/img/pp.jpg";
+import { CgProfile } from "react-icons/cg";
+import { IoMdLogOut } from "react-icons/io";
+import { FaUser, FaUserCircle } from "react-icons/fa";
 import NavDropdown from "react-bootstrap/NavDropdown";
-
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
 import "./Navbar.css";
+import "../../App.css";
 // import "../../assets/css/style.css";
 
 function Navbar() {
@@ -46,7 +47,6 @@ function Navbar() {
                 </li>
               </ul>
               <div id="check-profile">
-                {/* from API */}
                 <ul className="navbar-nav gap-1 gap-md-4 mx">
                   <li className="nav-item">
                     <a className="nav-link reg fancy-link" href="./register">
@@ -54,16 +54,24 @@ function Navbar() {
                     </a>
                   </li>
                   <a href="./login">
-                    <button className="btn btn-main-color">Login</button>
+                    <button className="btn btn-main-color"> Login</button>
                   </a>
                 </ul>
               </div>
-              <NavDropdown menuVariant="light">
-                <NavDropdown.Item href="/dashboard">Dashboard</NavDropdown.Item>
-                <NavDropdown.Item onClick={() => {
-                  localStorage.clear();
-                  window.location.href ="/login";
-                }}>Logout</NavDropdown.Item>
+
+              <FaUserCircle style={{ fontSize: "2rem" }} />
+              <NavDropdown style={{}} menuVariant="light">
+                <NavDropdown.Item href="/dashboard">
+                  <CgProfile /> Dashboard
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  onClick={() => {
+                    localStorage.clear();
+                    window.location.href = "/login";
+                  }}
+                >
+                  <IoMdLogOut /> Logout
+                </NavDropdown.Item>
               </NavDropdown>
             </div>
           </div>

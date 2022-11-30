@@ -3,20 +3,8 @@ import "../../assets/css/style-index.css";
 import "../../assets/css/style-profile.css";
 import { Link } from "react-router-dom";
 import kitten from "../../assets/img/kitten.png";
-import UIface3 from "../../assets/img/UIface3.jpg";
-import UIface4 from "../../assets/img/UIface4.jpg";
-import { discoverServices } from "../../services/discoverServices";
 
 const Discover = () => {
-  // const [listDiscovery, setListDiscovery] = useState([]);
-  // useEffect(() => {
-  //   discoverServices.getDiscoveryList().then((response) => {
-  //     setListDiscovery(response);
-  //   });
-  // }, []);
-
-  // console.log(listDiscovery);
-
   return (
     <>
       {/* <!-- Section 1--> */}

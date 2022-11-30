@@ -1,21 +1,19 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import bgmateri from "../../assets/img/bg-materi.png";
-import "../../assets/css/style-profile.css";
 import "../../assets/css/style.css";
 import ReactPlayer from "react-player";
 import { detailServices } from "../../services/detailServices";
 
 const Detail = () => {
-  // const [tabMateri, setTabMateri] = useState([]);
-
   const [detail, setDetail] = useState();
 
   const params = useParams();
   useEffect(() => {
     detailServices.getDetailList(params._id).then((response) => {
       setDetail(response.data);
-      console.log(response.data);
+      // console.log(response.data);
     });
   }, []);
   const [tabMateri, setTabMateri] = useState(0);
@@ -50,6 +48,7 @@ const Detail = () => {
                     <br />
                   </>
                 ))}
+                <br />
               </div>
             </div>
           </div>
@@ -63,15 +62,15 @@ const Detail = () => {
                       <ReactPlayer url={contentVideo} width="100%" />
                     ))}
                     <br />
-                    {item_materi.content.image.map((contentImage) => (
-                      <img src={contentImage} alt="" width="100%" />
-                    ))}
-                    <br />
-                    <div dangerouslySetInnerHTML={{ __html: item_materi.body }} />
                     {/* {item_materi.content.image.map((contentImage) => (
                       <img src={contentImage} alt="" width="100%" />
                     ))}
                     <br /> */}
+                    <div dangerouslySetInnerHTML={{ __html: item_materi.body }} />
+                    {item_materi.content.image.map((contentImage) => (
+                      <img src={contentImage} alt="" width="100%" />
+                    ))}
+                    <br />
                   </div>
                 </>
               ))}

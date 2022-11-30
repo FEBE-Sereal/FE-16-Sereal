@@ -11,10 +11,10 @@ function cardHome(props) {
         </div>
         <div className="col-lg-8">
           <div className="title py-2">
-            <h4>{props.judul}</h4>
+            <h4 style={{ color: "#000" }}>{props.judul}</h4>
           </div>
           <div className="paragraph">
-            <p>{props.caption}</p>
+            <p style={{ color: "#6c757d" }}>{props.caption}</p>
           </div>
           <div className="more">
             <Link to="/explore" className="text-decoration-none">
@@ -27,5 +27,4 @@ function cardHome(props) {
     </>
   );
 }
-
 export default cardHome;
