@@ -95,14 +95,14 @@ function Footer() {
           <div>
             <a href="" className="me-4 text-reset">
               <i className="fab fa-facebook-f">
-              <img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-new.png" />
-                {/* <FaInstagram /> */}
+              {/* <img src="https://img.icons8.com/ios-glyphs/30/000000/facebook-new.png" /> */}
+                <FaInstagram />
               </i>
             </a>
             <a href="" className="me-4 text-reset">
               <i className="fab fa-youtube">
-              <img src="https://img.icons8.com/ios-glyphs/30/000000/youtube-play.png" />  
-                {/* <FaYoutube /> */}
+              {/* <img src="https://img.icons8.com/ios-glyphs/30/000000/youtube-play.png" />   */}
+                <FaYoutube />
               </i>
             </a>
             <a href="" className="me-4 text-reset">
