@@ -2,6 +2,10 @@ import React from "react";
 import LogoSereal from "../../assets/img/logo_sereal.png";
 import { FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 
+const myFooterStyle = {
+  textDecoration: "none",
+};
+
 function Footer() {
   return (
     <>
@@ -42,22 +46,22 @@ function Footer() {
                 {/* Links */}
                 <h6 className="text-uppercase fw-bold mb-4">Kelas</h6>
                 <p>
-                  <a href="#" className="text-reset">
+                  <a href="/explore" className="text-reset" style={myFooterStyle}>
                     Melukis
                   </a>
                 </p>
                 <p>
-                  <a href="#" className="text-reset">
+                  <a href="/explore" className="text-reset" style={myFooterStyle}>
                     Teater
                   </a>
                 </p>
                 <p>
-                  <a href="#" className="text-reset">
+                  <a href="/explore" className="text-reset" style={myFooterStyle}>
                     Digital Art
                   </a>
                 </p>
                 <p>
-                  <a href="#" className="text-reset">
+                  <a href="/explore" className="text-reset" style={myFooterStyle}>
                     Menari
                   </a>
                 </p>
@@ -69,12 +73,12 @@ function Footer() {
                 {/* Links */}
                 <h6 className="text-uppercase fw-bold mb-4">Galeri</h6>
                 <p>
-                  <a href="#" className="text-reset">
+                  <a href="#" className="text-reset" style={myFooterStyle}>
                     Siswa
                   </a>
                 </p>
                 <p>
-                  <a href="#" className="text-reset">
+                  <a href="#" className="text-reset" style={myFooterStyle}>
                     Serrum
                   </a>
                 </p>
