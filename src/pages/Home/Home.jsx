@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../../assets/css/style-home.css";
 import CardHome from "../../components/CardHome/cardHome";
 import { homeServices } from "../../services/homeServices";
+
+const myHomeStyle = {
+  color: "#FFFF",
+  backgroundColor: "#fb9847",
+  borderRadius: "0.25rem",
+};
 
 const Home = () => {
   const [home, setHome] = useState([]);
@@ -26,8 +31,16 @@ const Home = () => {
               <h1 id="#try-move">
                 KEMBANGKAN TALENTA <span>SENIMU</span> BERSAMA SEREAL
               </h1>
-              <p>Belajar digital art, melukis, menari, musik, dan teater kini tidak lagi susah. Terutama untuk kalian kaum pelajar yang ingin mengembangkan talentanya.</p>
-              <Link to="/explore" className="btn btn-exp px-3 my-3">
+              <p>
+                Belajar digital art, melukis, menari, musik, dan teater kini
+                tidak lagi susah. Terutama untuk kalian kaum pelajar yang ingin
+                mengembangkan talentanya.
+              </p>
+              <Link
+                to="/explore"
+                className="btn btn-exp px-3 my-3"
+                style={myHomeStyle}
+              >
                 Explore Kelas
               </Link>
             </div>
@@ -45,7 +58,12 @@ const Home = () => {
           <div id="homes">
             {home.map((item) => (
               // console.log(item.id)
-              <CardHome id={item.id} img={item.image} judul={item.title} caption={item.description} />
+              <CardHome
+                id={item.id}
+                img={item.image}
+                judul={item.title}
+                caption={item.description}
+              />
             ))}
           </div>
         </div>

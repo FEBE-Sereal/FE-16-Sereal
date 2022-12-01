@@ -6,9 +6,15 @@ import { CgProfile } from "react-icons/cg";
 import { IoMdLogOut } from "react-icons/io";
 import { FaUser, FaUserCircle } from "react-icons/fa";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import "./Navbar.css";
-import "../../App.css";
+// import "./Navbar.css";
+// import "../../App.css";
 // import "../../assets/css/style.css";
+
+const myComponentStyle = {
+  color: "#FFFF",
+  backgroundColor: "#fb9847",
+  borderRadius: "0.25rem"
+}
 
 function Navbar() {
   return (
@@ -72,7 +78,9 @@ function Navbar() {
                       </a>
                     </li>
                     <a href="./login">
-                      <button className="btn btn-main-color"> Login</button>
+                      <div style={myComponentStyle}>
+                      <button className="btn-main-color btn">Login</button>
+                      </div>
                     </a>
                   </ul>
                 </div>

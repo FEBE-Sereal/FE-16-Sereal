@@ -1,4 +1,28 @@
+.main-imagekelas {
+  position: relative;
+  background-image: url(../img/bg-explore.jpg);
+  background-repeat: no-repeat center;
+  background-size: cover;
+  height: 350px;
+  overflow: hidden;
+}
+
+.main-imagedetail {
+  position: relative;
+  background-image: url(../img/bg-materi.png);
+  background-repeat: no-repeat center;
+  background-size: cover;
+  height: 300px;
+  overflow: hidden;
+}
 .text-main-color {
+  color: var(--main-color);
+}
+
+.detail-text h3 {
+  margin-top: 8vmin;
+  font-size: 5vmin;
+  font-weight: bold;
   color: var(--main-color);
 }
 

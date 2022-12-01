@@ -18,36 +18,32 @@ const Explore = () => {
   return (
     <>
       {/* <!-- Banner/ Carousel --> */}
-      <section className="row">
-        <div id="carouselExampleInterval" className="carousel slide col-centered" data-bs-ride="carousel">
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <div className="carousel-caption my-md-5">
-                <h1>Explore Kelas</h1>
-                <p>Ikuti dan pelajari kelas yang ada di Sereal</p>
-              </div>
-              <img src={BgExplore} className="d-block w-100" alt="..." />
+      <section>
+        <div className="main-imagekelas">
+          <div className="row">
+            <div className="con-text col-md-12 text-center col-sm-12 my-5 d-block">
+              <h1 id="#try-move">Explore Kelas</h1>
+              <p style={{ color: "#fff" }}>Ikuti dan pelajari kelas yang ada di Sereal.</p>
             </div>
           </div>
         </div>
-        <div className="col-10"></div>
       </section>
       {/* <!-- Banner/ Carousel End --> */}
       {/* <!-- Categories --> */}
       <section className="tab-container my-4">
         <ul className="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
           <li className="nav-item" role="presentation">
-            <button className="nav-link main-color active" id="pills-all" onClick="getDataKelas()" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+            <button className="nav-link main-color active" id="pills-all" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
               Semua Kelas
             </button>
           </li>
           <li className="nav-item" role="presentation">
-            <button className="nav-link nav-main-color" id="pills-melukis" onClick="getMelukisKelas()" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false">
+            <button className="nav-link nav-main-color" id="pills-melukis" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false">
               Melukis
             </button>
           </li>
           <li className="nav-item" role="presentation">
-            <button className="nav-link main-color" id="pills-digital" onClick="getDigitalKelas()" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+            <button className="nav-link main-color" id="pills-digital" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
               Digital Art
             </button>
           </li>
@@ -75,6 +71,14 @@ const Explore = () => {
                       <p className="card-text">{item.description}</p>
                       <div className="d-flex justify-content-between">
                         <Link to="">Level: {item.level}</Link>
+                        {/* {localStorage.getItem("token") ? (
+                          <>
+                          <Link to={`/detail/${item._id}`} className="btn btn-main-color" id="card-button">
+                          Ikuti Kelas
+                          </Link>
+                          </>
+                          
+                        )} */}
                         <Link to={`/detail/${item._id}`} className="btn btn-main-color" id="card-button">
                           Ikuti Kelas
                         </Link>
