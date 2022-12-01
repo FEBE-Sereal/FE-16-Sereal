@@ -7,6 +7,12 @@ import "../../assets/css/style-sign.css";
 import React from "react";
 import bg from "../../assets/img/bg-log.jpg";
 
+const myRegStyle = {
+  color: "Black",
+  borderColor: "#fb9847",
+  borderRadius: "70px",
+};
+
 function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -99,7 +105,7 @@ function Register() {
                         <label htmlFor="floatingPassword">Password</label>
                       </div>
                       <div className="d-grid">
-                        <button className="btn btn-lg btn-signUp text-uppercase fw-bold mb-2" type="submit">
+                        <button className="btn btn-lg btn-signUp text-uppercase fw-bold mb-2" type="submit" style={myRegStyle}>
                           Sign up
                         </button>
                         <div className="text-center">
