@@ -6,6 +6,12 @@ import "../../assets/css/style-sign.css";
 import bg from "../../assets/img/bg-log.jpg";
 import { loginServices } from "../../services/loginServices";
 
+const myLoginStyle = {
+  color: "Black",
+  borderColor: "#fb9847",
+  borderRadius: "70px",
+};
+
 const Login = () => {
   // const { user } = useSelector((state) => state.user);
   const [email, setEmail] = useState("");
@@ -85,7 +91,7 @@ const Login = () => {
                         <label htmlFor="floatingPassword">Password</label>
                       </div>
                       <div className="d-grid">
-                        <button className="btn btn-lg btn-login text-uppercase fw-bold mb-2" type="submit">
+                        <button className="btn btn-lg btn-login text-uppercase fw-bold mb-2" type="submit" style={myLoginStyle}>
                           Sign in
                         </button>
 
