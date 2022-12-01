@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import bgmateri from "../../assets/img/bg-materi.png";
 import "../../assets/css/style.css";
+import Iframe from "react-iframe";
 import ReactPlayer from "react-player";
 import { detailServices } from "../../services/detailServices";
 
@@ -20,19 +21,16 @@ const Detail = () => {
 
   return (
     <>
-      {/* <!-- Banner Start --> */}
-      <section className="overlay">
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src={bgmateri} className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <h3>{detail?.title}</h3>
-              <p>{detail?.description}</p>
+      <section>
+        <div className="main-imagedetail">
+          <div className="row">
+            <div className="detail-text col-md-12 text-center col-sm-12 my-5 d-block">
+              <h3 id="#try-move">{detail?.title}</h3>
+              <p style={{ color: "#fff" }}>{detail?.description}</p>
             </div>
           </div>
         </div>
       </section>
-
       {/* <!-- Materi Start --> */}
       <main className="container mt-5">
         <div className="row">
@@ -60,12 +58,9 @@ const Detail = () => {
                     <h3 style={{ color: "#fb9847" }}>{item_materi.title}</h3>
                     {item_materi.content.video.map((contentVideo) => (
                       <ReactPlayer url={contentVideo} width="100%" />
+                      // <Iframe url={contentVideo} width="640px" height="320px" id="" className="" display="block" position="relative" />
                     ))}
                     <br />
-                    {/* {item_materi.content.image.map((contentImage) => (
-                      <img src={contentImage} alt="" width="100%" />
-                    ))}
-                    <br /> */}
                     <div dangerouslySetInnerHTML={{ __html: item_materi.body }} />
                     {item_materi.content.image.map((contentImage) => (
                       <img src={contentImage} alt="" width="100%" />

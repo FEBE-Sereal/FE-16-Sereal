@@ -15,11 +15,7 @@ function About() {
       <div className="container">
         <div className="row">
           <div className="col-md-12 text-center">
-            {/* <h2 className="section-title">About Us</h2>
-            <p className="section-about">{messageabout}</p> */}
-
             <h2 className="section-title">The Team Behind SEREAL</h2>
-
             <p className="section-subtitle">{message}</p>
           </div>
 
@@ -33,7 +29,7 @@ function About() {
 
               <ul className="team-icon">
                 <li>
-                  <a href="https://www.instagram.com/" className="instagram">
+                  <a href="https://www.instagram.com/xameusgram/" className="instagram">
                     <BsInstagram />
                   </a>
                 </li>
