@@ -9,21 +9,13 @@ import About from "./pages/About/About";
 import Detail from "./pages/Detail/Detail";
 import Dashboard from "./pages/Dashboard/Dashboard";
 
-
-
 const AppRouter = () => {
-  const token = window.localStorage.getItem("token") === null
-  console.log(window.localStorage.getItem("token"))
+  const token = window.localStorage.getItem("token") === null;
+  console.log(window.localStorage.getItem("token"));
   return (
     <Routes>
       <Route path="/" element={<Discover />} />
-      <Route path="/login" element={
-         token ?
-          <Login />
-          :
-          <Navigate replace to="/home" />
-        
-      } />
+      <Route path="/login" element={token ? <Login /> : <Navigate replace to="/home" />} />
       <Route path="/home" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />

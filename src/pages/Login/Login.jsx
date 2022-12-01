@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
-// import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../../assets/css/style-sign.css";
 import bg from "../../assets/img/bg-log.jpg";
 import { loginServices } from "../../services/loginServices";
@@ -17,7 +16,6 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   // const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   useEffect(() => {
     // dispatch(Signin(email, password));
