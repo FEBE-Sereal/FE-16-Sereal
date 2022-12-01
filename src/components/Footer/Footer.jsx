@@ -3,7 +3,7 @@ import LogoSereal from "../../assets/img/logo_sereal.png";
 import { FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 
 const myFooterStyle = {
-  textDecoration: "none"
+  textDecoration: "none",
 };
 
 function Footer() {
@@ -46,22 +46,22 @@ function Footer() {
                 {/* Links */}
                 <h6 className="text-uppercase fw-bold mb-4">Kelas</h6>
                 <p>
-                  <a href="#" className="text-reset" style={myFooterStyle}>
+                  <a href="/explore" className="text-reset" style={myFooterStyle}>
                     Melukis
                   </a>
                 </p>
                 <p>
-                  <a href="#" className="text-reset" style={myFooterStyle}>
+                  <a href="/explore" className="text-reset" style={myFooterStyle}>
                     Teater
                   </a>
                 </p>
                 <p>
-                  <a href="#" className="text-reset" style={myFooterStyle}>
+                  <a href="/explore" className="text-reset" style={myFooterStyle}>
                     Digital Art
                   </a>
                 </p>
                 <p>
-                  <a href="#" className="text-reset" style={myFooterStyle}>
+                  <a href="/explore" className="text-reset" style={myFooterStyle}>
                     Menari
                   </a>
                 </p>
