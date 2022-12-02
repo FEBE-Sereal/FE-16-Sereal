@@ -14,6 +14,10 @@ const Explore = () => {
     });
   }, []);
 
+  const myLevelStyle = {
+    textDecoration: "none",
+  };
+
   // console.log(listExplore);
   return (
     <>
@@ -70,13 +74,17 @@ const Explore = () => {
                       <h5 className="card-title">{item.title}</h5>
                       <p className="card-text">{item.description}</p>
                       <div className="d-flex justify-content-between">
-                        <Link to="">Level: {item.level}</Link>
+                        <Link to="" style={myLevelStyle}>
+                          Level: {item.level}
+                        </Link>
                         {/* {localStorage.getItem("token") ? (
                           <>
                           <Link to={`/detail/${item._id}`} className="btn btn-main-color" id="card-button">
                           Ikuti Kelas
                           </Link>
+                          
                           </>
+                        ) : (
                           
                         )} */}
                         <Link to={`/detail/${item._id}`} className="btn btn-main-color" id="card-button">

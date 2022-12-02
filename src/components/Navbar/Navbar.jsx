@@ -13,8 +13,8 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 const myComponentStyle = {
   color: "#FFFF",
   backgroundColor: "#fb9847",
-  borderRadius: "0.25rem"
-}
+  borderRadius: "0.25rem",
+};
 
 function Navbar() {
   return (
@@ -54,11 +54,8 @@ function Navbar() {
               </ul>
               {localStorage.getItem("token") ? (
                 <>
-                  <FaUserCircle style={{ fontSize: "2rem" }} />
-                  <NavDropdown style={{}} menuVariant="light">
-                    <NavDropdown.Item href="/dashboard">
-                      <CgProfile /> Dashboard
-                    </NavDropdown.Item>
+                  <FaUserCircle style={{ fontSize: "2.1rem" }} />
+                  <NavDropdown menuVariant="light">
                     <NavDropdown.Item
                       onClick={() => {
                         localStorage.clear();
@@ -79,7 +76,7 @@ function Navbar() {
                     </li>
                     <a href="./login">
                       <div style={myComponentStyle}>
-                      <button className="btn-main-color btn">Login</button>
+                        <button className="btn-main-color btn">Login</button>
                       </div>
                     </a>
                   </ul>
