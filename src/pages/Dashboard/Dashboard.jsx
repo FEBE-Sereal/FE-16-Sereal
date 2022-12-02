@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Team1 from "../../assets/img/team1.png";
 import { dashboardServices } from "../../services/dashboardServices";
 // import "../../App.css"
 
@@ -23,7 +22,7 @@ function Dashboard() {
             <div className="col-lg-4">
               <div className="card mb-4">
                 <div className="card-body text-center">
-                  <img src={Team1} alt="avatar" className="rounded-circle img-fluid" style={{ width: "150px" }} />
+                  <img src="" alt="avatar" className="rounded-circle img-fluid" style={{ width: "150px" }} />
                   <h5 className="my-3">Nexus</h5>
                 </div>
               </div>
