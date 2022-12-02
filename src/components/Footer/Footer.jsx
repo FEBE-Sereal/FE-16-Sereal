@@ -73,12 +73,7 @@ function Footer() {
                 {/* Links */}
                 <h6 className="text-uppercase fw-bold mb-4">Galeri</h6>
                 <p>
-                  <a href="#" className="text-reset" style={myFooterStyle}>
-                    Siswa
-                  </a>
-                </p>
-                <p>
-                  <a href="#" className="text-reset" style={myFooterStyle}>
+                  <a href="/gallery" className="text-reset" style={myFooterStyle}>
                     Serrum
                   </a>
                 </p>
