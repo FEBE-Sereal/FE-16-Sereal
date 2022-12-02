@@ -21,7 +21,7 @@ const Gallery = () => {
     <>
       <section className="main pb-5">
         <div className="container">
-          <h1 className="p-4 text-center">Gallery Sereal</h1>
+          <h1 className="p-4 text-center">GALLERY SEREAL</h1>
           {/* <hr className="border border-2 border-dark mx-auto w-25 bg-dark" /> */}
           <div id="videos" className="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-4">
             {gallery.map((item, item_content) => (

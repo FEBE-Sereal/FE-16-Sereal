@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LogoSereal from "../../assets/img/logo_sereal.png";
-import pp from "../../assets/img/pp.jpg";
 import { CgProfile } from "react-icons/cg";
 import { IoMdLogOut } from "react-icons/io";
 import { FaUser, FaUserCircle } from "react-icons/fa";

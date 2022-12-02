@@ -26,7 +26,7 @@ const Explore = () => {
         <div className="main-imagekelas">
           <div className="row">
             <div className="con-text col-md-12 text-center col-sm-12 my-5 d-block">
-              <h1 id="#try-move">Explore Kelas</h1>
+              <h1 id="#try-move">EXPLORE KELAS</h1>
               <p style={{ color: "#fff" }}>Ikuti dan pelajari kelas yang ada di Sereal.</p>
             </div>
           </div>

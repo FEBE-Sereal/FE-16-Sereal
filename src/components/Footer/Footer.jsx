@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import LogoSereal from "../../assets/img/logo_sereal.png";
 import { FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 
@@ -92,21 +93,21 @@ function Footer() {
 
           {/* Right */}
           <div>
-            <a href="#" className="me-4 text-reset">
+            <Link to="#" className="me-4 text-reset">
               <i className="fab fa-instagram" style={{ color: "black" }}>
                 <FaInstagram style={{ fontSize: "2rem" }} />
               </i>
-            </a>
-            <a href="#" className="me-4 text-reset">
+            </Link>
+            <Link to="#" className="me-4 text-reset">
               <i className="fab fa-twitter-f" style={{ color: "black" }}>
                 <FaTwitter style={{ fontSize: "2rem" }} />
               </i>
-            </a>
-            <a href="#" className="me-4 text-reset">
+            </Link>
+            <Link to="#" className="me-4 text-reset">
               <i className="fab fa-youtube" style={{ color: "black" }}>
                 <FaYoutube style={{ fontSize: "2.3rem" }} />
               </i>
-            </a>
+            </Link>
           </div>
           {/* Right */}
         </section>
